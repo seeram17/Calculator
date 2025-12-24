@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="input"></div>
+
+        <div class="operations">
+
+            <div class="button"><button class="gray" onclick="updatecalculation('1')">1</button></div>
+            <div class="button"><button class="gray" onclick="updatecalculation('2')">2</button></div>
+            <div class="button"><button class="gray" onclick="updatecalculation('3')">3</button></div>
+            <div class="button"><button class="yellow" onclick="updatecalculation('+')">+</button></div>
+
+            <div class="button"><button class="gray" onclick="updatecalculation('4')">4</button></div>
+            <div class="button"><button class="gray" onclick="updatecalculation('5')">5</button></div>
+            <div class="button"><button class="gray" onclick="updatecalculation('6')">6</button></div>
+            <div class="button"><button class="yellow" onclick="updatecalculation('-')">-</button></div>
+
+            <div class="button"><button class="gray" onclick="updatecalculation('7')">7</button></div>
+            <div class="button"><button class="gray" onclick="updatecalculation('8')">8</button></div>
+            <div class="button"><button class="gray" onclick="updatecalculation('9')">9</button></div>
+            <div class="button"><button class="yellow" onclick="updatecalculation('*')">*</button></div>
+
+            <div class="button"><button class="gray" onclick="updatecalculation('0')">0</button></div>
+            <div class="button"><button class="gray" onclick="updatecalculation('.')">.</button></div>
+
+            <div class="button">
+                <button class="gray" onclick="calculateResult()">=</button>
+            </div>
+
+            <div class="button"><button class="yellow" onclick="updatecalculation('/')">/</button></div>
+
+            <div class="button">
+                <button class="clear" onclick="clearCalculation()">Clear</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let calculation = '';
+
+        function updatecalculation(character) {
+            calculation += character;
+            console.log(calculation);
+        }
+
+        function calculateResult() {
+            calculation = eval(calculation);
+            console.log(calculation);
+        }
+
+        function clearCalculation() {
+            calculation = '';
+            console.log('Calculation cleared');
+        }
+    </script>
+</body>
+
+</html>
