@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -43,21 +45,28 @@
     </div>
 
     <script>
-        let calculation = '';
+
+
+        let calculation = localStorage.getItem('calculation') || '';
+
+        document.querySelector('.input').innerHTML = calculation;
 
         function updatecalculation(character) {
             calculation += character;
-            console.log(calculation);
+            localStorage.setItem('calculation', calculation);
+            document.querySelector('.input').innerHTML = calculation;
         }
 
         function calculateResult() {
             calculation = eval(calculation);
-            console.log(calculation);
+            localStorage.setItem('calculation', calculation);
+            document.querySelector('.input').innerHTML = calculation;
         }
 
         function clearCalculation() {
             calculation = '';
-            console.log('Calculation cleared');
+            localStorage.setItem('calculation', calculation);
+            document.querySelector('.input').innerHTML = calculation;
         }
     </script>
 </body>

@@ -1,6 +1,6 @@
 .calculator {
     position: relative;
-    height: 430px;
+    height: 400px;
     width: 290px;
     background-color: rgba(0, 0, 0, 0.955);
     border: solid black;
@@ -8,20 +8,36 @@
 }
 
 .input {
-    background-color: white;
-    height: 50px;
-    width: 264px;
-    padding-top: 20px;
+    background-color: black;
     position: absolute;
     top: 20px;
     left: 10px;
-    border: solid black;
+    width: 260px;
+    height: 55px;
+
+    color: white;
+    padding: 10px;
+    font-size: 33px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: right;
+
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.input::-webkit-scrollbar {
+    display: none;
 }
 
 .operations {
     position: relative;
     width: 260px;
-    top: 120px;
+    top: 90px;
     left: 15px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
