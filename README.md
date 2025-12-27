@@ -34,10 +34,4 @@ https://seeram17.github.io/Calculator/
 - Creating layouts with CSS Grid
 - Improving user experience with animations and scrolling behavior
 
----
 
-## Project Structure
-calculator/
-│── index.html
-│── style.css
-└── README.md
